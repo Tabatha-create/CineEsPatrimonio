@@ -26,7 +26,7 @@ fetch('peliculas.json')
               <img src="${movie.poster}" alt="Poster de ${movie.title}" title="Haz clic para ver el trailer de la película"></a>
           </td>
           <td>
-            <a href="criticas.html?pelicula=${movie.id}" target="_blank" title="Haz clic para acceder a la página de Críticas">${movie.title}</a>
+            <a href="criticas/criticas.html?pelicula=${movie.id}" target="_blank" title="Haz clic para acceder a la página de Críticas">${movie.title}</a>
           </td>
           <td>${movie.director}</td>
           <td>${movie.year}</td>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Críticas Cinematográficas</title>
-    <link rel="stylesheet" href="css/criticas.css">
+    <link rel="stylesheet" href="/criticas/css/criticas.css">
     <!-- <link rel="stylesheet" href="css/pruebas.css"> -->
 </head>
 <body>
@@ -19,7 +19,7 @@
         <div class="falling-element element5">📽</div>
         <nav> 
             <ul> 
-                <li><a href="index.html">Inicio</a></li> 
+                <li><a href="../index.html">Inicio</a></li> 
                 <li><a href="criticas.html">Críticas</a></li> 
                 <li><a href="#formularios">Contacto</a></li>
                 <li><a href="blog.html">Blog</a></li> 
@@ -56,7 +56,8 @@
                     <a id="imdb-link" href="#" target="_blank" class="boton-enlace">Ver en IMDB</a>
                 </div>
             </article> 
-            <iframe id="trailer" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+            <!-- <iframe id="trailer" width="560" height="315" frameborder="0" allowfullscreen></iframe> -->
+            
         </section>
 
         <section>
@@ -104,30 +105,42 @@
             <a href="https://twitter.com/intent/tweet?url=https://tu_pagina.com/critica.html&text=Check%20out%20this%20movie%20review!" target="_blank">Compartir en Twitter</a>
         </section>
     
-    
-    
-    
-    
-    
-    
-    
-    
     </main> 
-    
-    
-    
-    
-    
     
     <footer> 
         <p>&copy; 2024 Cine como Patrimonio. Todos los derechos reservados.</p>
-        <img src="favicon.ico" alt="Logo">
+        <img src="/favicon.ico" alt="Logo">
     </footer>
-    <script src="js/criticas.js"></script>
+    <script src="/criticas/js/criticas.js"></script>
     <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Volver arriba">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 19V5M5 12l7-7 7 7"/>
         </svg>
     </button>
+
+    <div class="banner-construccion">🚧 Sitio en construcción 🚧</div>
+
+  <style>
+  .banner-construccion {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 193, 7, 0.9);
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    border-radius: 8px;
+    z-index: 9999;
+    animation: palpitar 1.5s infinite;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+
+  @keyframes palpitar {
+    0%, 100% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.1); }
+  }
+  </style>
 </body>
 </html>

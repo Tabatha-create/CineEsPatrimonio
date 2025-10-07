@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patrimonio Fílmico</title>
-    <link rel="stylesheet" href="css/patrimonio.css">
+    <link rel="stylesheet" href="/patrimonio/css/patrimonio.css">
 </head>
 <body>
     <header>
@@ -21,7 +21,7 @@
         
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="/index.html">Inicio</a></li>
                 <li><a href="#patrimonio"></a></li>
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#enlaces">Enlaces</a></li>
@@ -132,7 +132,7 @@ Las filmotecas y la FIAF juegan un papel crucial en la preservación de la memor
             <select id="role" name="role" required>
                 <option value="colaborador">Colaborador</option>
                 <option value="usuario">Usuario</option>
-            </select<>
+            </select>
             <input type="submit" value="Enviar">
         </form>
     </section>
@@ -141,13 +141,39 @@ Las filmotecas y la FIAF juegan un papel crucial en la preservación de la memor
 
     <footer>
         <p>&copy; 2024 Cine como Patrimonio. Todos los derechos reservados.</p>
-        <img src="favicon.ico" alt="Logo">
+        <img src="/favicon.ico" alt="Logo">
     </footer>
-    <script src="js/patrimonio.js"></script>
+    <script src="/patrimonio/js/patrimonio.js"></script>
     <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Volver arriba">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 19V5M5 12l7-7 7 7"/>
         </svg>
     </button>
+
+  <div class="banner-construccion">🚧 Sitio en construcción 🚧</div>
+
+  <style>
+  .banner-construccion {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 193, 7, 0.9);
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    border-radius: 8px;
+    z-index: 9999;
+    animation: palpitar 1.5s infinite;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+
+  @keyframes palpitar {
+    0%, 100% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.1); }
+  }
+  </style>
+
 </body>
 </html>
