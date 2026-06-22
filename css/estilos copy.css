@@ -7,21 +7,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-.falling-element{
-    position: absolute;
-    font-size: 3rem;
-    top: -50px;
-    animation: fall 3s linear infinite;
-}
-@keyframes fall{
-    0% { transform: translateY(-50px);}
-    100% { transform: translateY(250px);}
-}
-.element1 { left: 15%; animation-delay: 1s;}
-.element2 { left: 35%; animation-delay: 0.5s;}
-.element3 { left: 50%; animation-delay: 1s;}
-.element4 { left: 65%; animation-delay: 0.5s;}
-.element5 { left: 80%; animation-delay: 1s;}
 
 .banner {    
     position: relative;
@@ -38,12 +23,7 @@ body {
     font-family: cinzel, serif;
     padding: 20px;
 }
-@keyframes wave {
-    0%, 100% { transform: translateX(0) translateY(0);}
-    25% { transform: translateX(25%) translateY(-20px);}
-    50% { transform: translateX(50%) translateY(0);}
-    75% { transform: translateX(75%) translateY(20px);}
-}
+
 @media (max-width: 768px) {
     .banner {
         height: auto;
@@ -173,7 +153,7 @@ nav ul li a {
 .texto-al-lado p {
     margin: 0;
     font-size: 12px;
-    line-height: 1.4;
+    line-height: 1.2;
     text-align: justify;
 }
 .texto-al-lado h3 {
@@ -203,52 +183,14 @@ nav ul li a {
     font-size: 7em;
     color: white;
     white-space: nowrap;
-    animation: wave 10s ease-in-out infinite;
     text-shadow: 2px 2px 4px #8b4513,
                 -2px -2px 4px #d2b48c;
 }
-.titulo-3d {
+.titulo {
     font-size: 3rem;
-    text-transform: uppercase;
-    color: #ffd700;
-    text-shadow: 
-        1px 1px 0 #daa520,
-        2px 2px 0 #b8860b,
-        3px 3px 0 #996515,
-        4px 4px 0 #8b7355,
-        5px 5px 0 #704214,
-        6px 6px 10 rgba(0, 0, 0, 0.4);
-    background: linear-gradient(
-        to bottom,
-        #ffd700 0%,
-        #daa520 50%,
-        #b8860b 100% );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #daa520;
 }
-/* barra para los enlaces a las redes sociales */
-.sidebar {
-    position: fixed;
-    top: 20%;
-    right: 5px;
-    background-color: #d49138;
-    padding: 3px;
-    border: 2px solid #704214;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-}
-  .social-icons {
-    list-style: none;
-    padding: 0;
-}
-  .social-icons li {
-    margin-bottom: 10px;
-}
-  .social-icons a {
-    color: #faf6f1;
-    font-size: 24px;
-}
+
 .proyecto-evaaixa {
     max-width: 1000px;
     margin: 25px auto;
@@ -291,17 +233,26 @@ nav ul li a {
 #chaplin {
     width: 250px;
     cursor: pointer;
-    animation: zoomChaplin 5s infinite;
+}
+.chaplin-cita {
+    max-width: 320px;
+    margin: 15px auto;
+    padding: 10px 15px;
+    font-style: italic;
+    color: #704214;
+    background: rgba(255,255,255,0.75);
+    border-left: 4px solid #8b4513;
+    border-radius: 6px;
+    line-height: 1.5;
+    text-align: center;
+}
+.intro-patrimonio {
+    line-height: 1.6;
+    text-align: justify;
+    color: #daa520;
+    font-size: 1rem;
 }
 
-@keyframes zoomChaplin {
-    0%, 100% {
-        transform: scale(1) translateY(0);
-    }
-    50% {
-        transform: scale(1.5) translateY(-20px);
-    }
-}
 /* ajustes del main con imagen de fondo */
 main {
     position: relative;
@@ -901,7 +852,6 @@ img {
 }
 .noticia-img:hover {
     transform: translateY(-25px);
-    transform: rotate(50deg);
 }
 .img-container {
     overflow: hidden;
@@ -928,32 +878,10 @@ img {
 }
 /* Estilos sección infantil */
 .cine_infantil {
-    animation: color-size-change 7s infinite;
     font-size: 2rem;
     color: #ff0000;
 }
-@keyframes color-size-change {
-    0% {
-        font-size: 2rem;
-        color: #ff0000;
-    }
-    25% {
-        font-size: 3rem;
-        color: #00ff00;
-    }
-    50% {
-        font-size: 2rem;
-        color: #0000ff;
-    }
-    75% {
-        font-size: 3rem;
-        color: yellow;
-    }
-    100% {
-        font-size: 2rem;
-        color: #ff0000;
-    }
-}
+
 .sidebar-section-infantil {
     background-color: #f9f9f9;
     border-radius: 8px;
@@ -1097,7 +1025,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 5px;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
     left: 0;
